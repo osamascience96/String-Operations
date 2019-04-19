@@ -1,0 +1,23 @@
+s = 'pining for the fjords'
+t = s.split()
+print(t)
+
+s1 = 'spam-spam-spam'
+delimiter = '-'
+s1 = s1.split(delimiter)
+print(s1)
+
+
+s2 = ['pining', 'for', 'the', 'fjords']
+delimiter = ' ' 
+s2 = delimiter.join(s2)
+print(s2)
+
+word = ''
+# performing the string split operation 
+fhand = open('mail_short.txt')
+for line in fhand:
+    if not line.startswith('From '):
+        continue
+    word = line.split()
+    print(word[2])
