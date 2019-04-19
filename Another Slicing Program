@@ -1,0 +1,12 @@
+data = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
+
+# indexing out the start targeting index 
+atPosition = data.find('@') # return the index where @
+print(atPosition)
+
+toPosition = data.find(' ', atPosition) # find whitespace after @ which is atPosition
+print(toPosition)
+
+# slicing the data
+host = data[atPosition:toPosition]
+print(host)
