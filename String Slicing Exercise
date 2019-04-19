@@ -1,0 +1,13 @@
+data = 'X-DSPAM-Confidence: 0.8475 '
+
+# extracting the space from the right side
+data.lstrip()
+# extract the value after colon 
+colonIndex = data.find(':')
+valueIndex = data.find(' ', colonIndex) 
+
+# extracting the value and converting to float
+floatValue = float(data[valueIndex:].lstrip())
+
+# adding 1 to the value and print 
+print(floatValue + 1)   
